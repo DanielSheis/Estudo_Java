@@ -3,7 +3,7 @@ package aulasdevdojo.javacore.Fmodificadorstatic.domain;
 public class Carro {
     private String marca;
     private double velocidadeMaxima;
-    public static double velocidadeLimite = 250;
+    private static double velocidadeLimite = 250;
 
     public Carro(String marca, double velocidadeMaxima) {
         this.marca = marca;
@@ -32,5 +32,13 @@ public class Carro {
 
     public double getVelocidadeMaxima() {
         return this.velocidadeMaxima;
+    }
+
+    public static void setVelocidadeLimite(double velocidadeLimite) {
+        Carro.velocidadeLimite = velocidadeLimite;
+    }
+
+    public static double getVelocidadeLimite() {
+        return Carro.velocidadeLimite;
     }
 }
